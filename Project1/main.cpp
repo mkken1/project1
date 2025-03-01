@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 std::string Calc_Sys(int n, int sys)
 {
-	std::string result = "";
+	string result = "";
 	while (n > 0)
 	{
-		result = std::to_string(n % sys) + result;
+		result = to_string(n % sys) + result;
 		n /= sys;
 	}
 	return result;
@@ -15,15 +16,15 @@ std::string Calc_Sys(int n, int sys)
 int main()
 {
 	int number, calculus_sys;
-	std::cout << "number: "; 
-	std::cin >> number;
+	cout << "number: "; 
+	cin >> number;
 
-	std::cout << "\ncalculus system: ";
-	std::cin >> calculus_sys;
+	cout << "\ncalculus system: ";
+	cin >> calculus_sys;
 
-	std::string str = Calc_Sys(number, calculus_sys);
+	string str = Calc_Sys(number, calculus_sys);
 
-	std::cout << "\nresult: " << str;
+	cout << "\nresult: " << str;
 
 	return 1;
 }
