@@ -5,7 +5,7 @@ using namespace std;
 std::string Calc_Sys(int n, int sys)
 {
 	string result = "";
-	while (n > 0)
+	while (n > 0 && sys <= 10)
 	{
 		result = to_string(n % sys) + result;
 		n /= sys;
